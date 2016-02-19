@@ -1,0 +1,152 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="stylesheet" href="assets/styles/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/styles/ie8.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="chuneungApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div id="page-wrapper">
+    <!-- Header -->
+      <header id="header">
+        <div class="logo container">
+          <div>
+            <h1><a id="logo">Chuneung</a></h1>
+            <!-- <p>A responsive site template by HTML5 UP</p> -->
+          </div>
+        </div>
+      </header>
+      <!-- Nav -->
+      <nav id="nav">
+        <ul>
+          <li class="{{selected === undifined? 'current': ''}}"><a ng-href="#/about" ng-click="selected=undifined">Home</a></li>
+          <li>
+            <a href="#">Dropdown</a>
+            <ul>
+              <li><a href="#">Lorem ipsum dolor</a></li>
+              <li><a href="#">Magna phasellus</a></li>
+              <li>
+                <a href="#">Phasellus consequat</a>
+                <ul>
+                  <li><a href="#">Lorem ipsum dolor</a></li>
+                  <li><a href="#">Phasellus consequat</a></li>
+                  <li><a href="#">Magna phasellus</a></li>
+                  <li><a href="#">Etiam dolore nisl</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Veroeros feugiat</a></li>
+            </ul>
+          </li>
+          <li class="{{selected === 3? 'current': ''}}"><a ng-href="#/left" ng-click="selected=3">Left Sidebar</a></li>
+          <li class="{{selected === 4? 'current': ''}}"><a ng-href="#/right" ng-click="selected=4">Right Sidebar</a></li>
+          <li class="{{selected === 5? 'current': ''}}"><a ng-href="#/no_side" ng-click="selected=5">No Sidebar</a></li>
+        </ul>
+      </nav>
+
+
+      <div id="main-wrapper">
+      <div id="main" class="container" ng-view=""></div>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer" class="container">
+        <div class="row 200%">
+          <div class="12u">
+
+            <!-- About -->
+              <section>
+                <h2 class="major"><span>What's this about?</span></h2>
+                <p>
+                  This is <strong>TXT</strong>, yet another free responsive site template designed by
+                  <a href="http://n33.co">AJ</a> for <a href="http://html5up.net">HTML5 UP</a>. It's released under the
+                  <a href="http://html5up.net/license/">Creative Commons Attribution</a> license so feel free to use it for
+                  whatever you're working on (personal or commercial), just be sure to give us credit for the design.
+                  That's basically it :)
+                </p>
+              </section>
+
+          </div>
+        </div>
+        <div class="row 200%">
+          <div class="12u">
+
+            <!-- Contact -->
+              <section>
+                <h2 class="major"><span>Get in touch</span></h2>
+                <ul class="contact">
+                  <li><a class="icon fa-facebook" href="#"><span class="label">Facebook</span></a></li>
+                  <li><a class="icon fa-twitter" href="#"><span class="label">Twitter</span></a></li>
+                  <li><a class="icon fa-instagram" href="#"><span class="label">Instagram</span></a></li>
+                  <li><a class="icon fa-dribbble" href="#"><span class="label">Dribbble</span></a></li>
+                  <li><a class="icon fa-google-plus" href="#"><span class="label">Google+</span></a></li>
+                </ul>
+              </section>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+          <div id="copyright">
+            <ul class="menu">
+              <li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+          </div>
+
+      </footer>
+    </div>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <script src="assets/util/jquery.min.js"></script>
+    <script src="assets/util/jquery.dropotron.min.js"></script>
+    <script src="assets/util/skel.min.js"></script>
+    <script src="assets/util/skel-viewport.min.js"></script>
+    <script src="assets/util/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/util/main.js"></script>
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
